@@ -1,9 +1,5 @@
-" Skip initialization for vim-tiny or vim-small.
-if !1 | finish | endif
-
-if &compatible
-    set nocompatible
-endif 
+set nocompatible  " be iMproved, required
+filetype off      " required
 
 " Plugins
 call plug#begin('~/nvim/plugged')  
@@ -116,3 +112,28 @@ set noswapfile
 
 " write automatically when quitting buffer
 set autowrite
+
+" Add syntax highlighting
+if has("syntax")
+  syntax on
+endif
+" And make sure it's readable on a dark background
+set background=dark
+
+" Jump to the latest line when re-opening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+" Load indentation rules and plugins according to the detected filetype.
+if has("autocmd")
+  filetype plugin indent on
+endif
+
+set showcmd		" Show (partial) command in status line.
+set showmatch		" Show matching brackets.
+set ignorecase		" Do case insensitive matching
+set smartcase		" Do smart case matching
+set incsearch		" Incremental search
+set autowrite		" Automatically save before commands like :next and :make
+set hidden		" Hide buffers when they are abandoned
