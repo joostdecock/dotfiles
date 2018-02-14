@@ -4,6 +4,10 @@ filetype off      " required
 " Plugins
 call plug#begin('~/nvim/plugged')  
 
+" Lightline status bar - see config below plugins
+Plug 'itchyny/lightline.vim'
+
+
 " Sensible defaults
 Plug 'tpope/vim-sensible'
 
@@ -37,14 +41,14 @@ Plug 'amiorin/vim-project'
 Plug 'StanAngeloff/php.vim'
 
 " PHP auto completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'mkusher/padawan.vim', 
-Plug 'padawan-php/deoplete-padawan', {'for': 'php'}
-Plug 'StanAngeloff/php.vim', {'for': 'php'}
-Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
-Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
-Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
-Plug 'phpstan/vim-phpstan', {'for': 'php'}
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'mkusher/padawan.vim', 
+" Plug 'padawan-php/deoplete-padawan', {'for': 'php'}
+" Plug 'StanAngeloff/php.vim', {'for': 'php'}
+" Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
+" Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
+" Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
+" Plug 'phpstan/vim-phpstan', {'for': 'php'}
 
 " Namespaces
 Plug 'arnaud-lb/vim-php-namespace'
@@ -69,14 +73,26 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown', {'for': 'md'}
 
-" status bar
-Plug 'itchyny/lightline.vim'
 
 " undo tree
 Plug 'sjl/gundo.vim'
 
 call plug#end()  
 
+
+" Lightline status bar configuration
+set laststatus=2 " Force display
+set noshowmode " Don't show -- INSERT --
+let g:lightline = {
+      \ 'colorscheme': 'Dracula',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
 
 
 " disable arrow keys
