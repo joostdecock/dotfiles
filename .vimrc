@@ -74,7 +74,19 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+" Remap direction keys
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <Space> j
+nnoremap j h
+vnoremap <Space> j
+vnoremap j h
+
+" Remap escape key
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap kj <Esc>
+
 " Set <leader> to comma
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :let mapleader = ","
 
@@ -99,48 +111,13 @@ Plug 'scrooloose/nerdtree'              " File tree
 Plug 'Townk/vim-autoclose'              " Auto-close brackets, quotes
 Plug 'StanAngeloff/php.vim'             " PHP syntax highlighter
 Plug 'rayburgemeestre/phpfolding.vim'   " PHP auto-folding
-Plug 'tomtom/tlib_vim'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'garbas/vim-snipmate'
-Plug 'freesewing/core-vim-snippets'
-"Plug 'honza/vim-snippets'
-"" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'mkusher/padawan.vim', 
-" Plug 'padawan-php/deoplete-padawan', {'for': 'php'}
-" " Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
-" " Plug 'arnaud-lb/vim-php-namespace', {'for': 'php'}
-" " Plug 'nishigori/vim-php-dictionary', {'for': 'php'}
-" " Plug 'phpstan/vim-phpstan', {'for': 'php'}
-" 
-" " Namespaces
-" Plug 'arnaud-lb/vim-php-namespace'
-" 
-" " Fuzzy search
-" Plug 'junegunn/fzf.vim'
-" 
-" " Linters
-" Plug 'neomake/neomake'
-" Plug 'adoy/vim-php-refactoring-toolbox'
-" Plug 'stephpy/vim-php-cs-fixer'
-" Plug 'phpactor/phpactor'
-" 
-" " Snippets
-" Plug 'honza/vim-snippets'
-" 
-" " tmux stuff
-" Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events'
-" Plug 'christoomey/vim-tmux-navigator'
-" 
-" " markdown 
-" Plug 'godlygeek/tabular'
-" Plug 'plasticboy/vim-markdown', {'for': 'md'}
-" 
-" 
-" " undo tree
-" Plug 'sjl/gundo.vim'
-" 
-call plug#end()  
+Plug 'tomtom/tlib_vim'                  " Required for other plugins
+Plug 'MarcWeber/vim-addon-mw-utils'     " Required for other plugins
+Plug 'garbas/vim-snipmate'              " Snippets engine
+Plug 'freesewing/core-vim-snippets'     " Freesewing core snippets
+Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
 
+call plug#end()  
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   PLUGIN CONFIGURATION
@@ -173,3 +150,8 @@ nmap <leader>ph <Plug>GitGutterPrevHunk
 " NERDTREE PLUGIN
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>tre :NERDTreeToggle<CR>
+
+" VIM-PHP-CS-FIXER
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <silent><leader>fpd :call PhpCsFixerFixDirectory()<CR>
+nnoremap <silent><leader>fpf :call PhpCsFixerFixFile()<CR>
