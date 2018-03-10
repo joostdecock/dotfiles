@@ -115,8 +115,8 @@ Plug 'tomtom/tlib_vim'                  " Required for other plugins
 Plug 'MarcWeber/vim-addon-mw-utils'     " Required for other plugins
 Plug 'garbas/vim-snipmate'              " Snippets engine
 Plug 'freesewing/core-vim-snippets'     " Freesewing core snippets
-Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'}
-
+Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'} " PHP code style fixer
+Plug 'posva/vim-vue'                    " Syntax highlighting for Vue components
 call plug#end()  
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
