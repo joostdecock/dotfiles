@@ -18,6 +18,9 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set shiftround
+autocmd Filetype js setlocal tabstop=2 softtabstop=2 shiftwidth=2 
+autocmd Filetype vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd Filetype json setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " Use case insensitive search, except when using capital letters
 set ignorecase
@@ -108,7 +111,7 @@ Plug 'tpope/vim-fugitive'               " Figutive for Git integration
 Plug 'airblade/vim-gitgutter'           " Git gutter keeps track of changes
 Plug 'itchyny/lightline.vim'            " Lightline status bar
 Plug 'scrooloose/nerdtree'              " File tree
-Plug 'Townk/vim-autoclose'              " Auto-close brackets, quotes
+" Plug 'Townk/vim-autoclose'              " Auto-close brackets, quotes
 Plug 'StanAngeloff/php.vim'             " PHP syntax highlighter
 Plug 'rayburgemeestre/phpfolding.vim'   " PHP auto-folding
 Plug 'tomtom/tlib_vim'                  " Required for other plugins
