@@ -120,6 +120,7 @@ Plug 'garbas/vim-snipmate'              " Snippets engine
 Plug 'freesewing/core-vim-snippets'     " Freesewing core snippets
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'} " PHP code style fixer
 Plug 'posva/vim-vue'                    " Syntax highlighting for Vue components
+Plug 'editorconfig/editorconfig-vim'    " See editorconfig.org
 call plug#end()  
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -132,7 +133,6 @@ call plug#end()
 set laststatus=2 " Force display
 set noshowmode " Don't show -- INSERT --
 let g:lightline = {
-      \ 'colorscheme': 'Dracula',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
