@@ -121,6 +121,17 @@ Plug 'freesewing/core-vim-snippets'     " Freesewing core snippets
 Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'} " PHP code style fixer
 Plug 'posva/vim-vue'                    " Syntax highlighting for Vue components
 Plug 'editorconfig/editorconfig-vim'    " See editorconfig.org
+Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim
+Plug 'Quramy/tsuquyomi'                 " A Vim plugin for TypeScript
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+"Plug 'Valloric/YouCompleteMe', {
+"     \ 'build' : {
+"     \     'mac' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+"     \     'unix' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+"     \     'windows' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
+"     \     'cygwin' : './install.sh --clang-completer --system-libclang --omnisharp-completer'
+"     \    }
+"     \ }
 call plug#end()  
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
