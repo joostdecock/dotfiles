@@ -1,5 +1,9 @@
 set nocompatible  " be iMproved, required
 
+" See: https://alldrops.info/posts/vim-drops/2018-04-08_javascript-autocompletion-on-vim/
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 filetype off      " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   BASIC CONFIGURATION
@@ -14,13 +18,10 @@ set number
 " Tab handling
 set autoindent
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set shiftround
-autocmd Filetype js setlocal tabstop=2 softtabstop=2 shiftwidth=2 
-autocmd Filetype vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
-autocmd Filetype json setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " Use case insensitive search, except when using capital letters
 set ignorecase
@@ -106,20 +107,14 @@ map fc zc
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/nvim/plugged')  
-
+Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
 Plug 'tpope/vim-fugitive'               " Figutive for Git integration
 Plug 'airblade/vim-gitgutter'           " Git gutter keeps track of changes
 Plug 'itchyny/lightline.vim'            " Lightline status bar
 Plug 'scrooloose/nerdtree'              " File tree
 " Plug 'Townk/vim-autoclose'              " Auto-close brackets, quotes
-Plug 'StanAngeloff/php.vim'             " PHP syntax highlighter
-Plug 'rayburgemeestre/phpfolding.vim'   " PHP auto-folding
 Plug 'tomtom/tlib_vim'                  " Required for other plugins
 Plug 'MarcWeber/vim-addon-mw-utils'     " Required for other plugins
-Plug 'garbas/vim-snipmate'              " Snippets engine
-Plug 'freesewing/core-vim-snippets'     " Freesewing core snippets
-Plug 'stephpy/vim-php-cs-fixer', {'for': 'php'} " PHP code style fixer
-Plug 'posva/vim-vue'                    " Syntax highlighting for Vue components
 Plug 'editorconfig/editorconfig-vim'    " See editorconfig.org
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 "Plug 'Valloric/YouCompleteMe', {
