@@ -112,19 +112,10 @@ Plug 'tpope/vim-fugitive'               " Figutive for Git integration
 Plug 'airblade/vim-gitgutter'           " Git gutter keeps track of changes
 Plug 'itchyny/lightline.vim'            " Lightline status bar
 Plug 'scrooloose/nerdtree'              " File tree
-" Plug 'Townk/vim-autoclose'              " Auto-close brackets, quotes
 Plug 'tomtom/tlib_vim'                  " Required for other plugins
 Plug 'MarcWeber/vim-addon-mw-utils'     " Required for other plugins
 Plug 'editorconfig/editorconfig-vim'    " See editorconfig.org
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
-"Plug 'Valloric/YouCompleteMe', {
-"     \ 'build' : {
-"     \     'mac' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
-"     \     'unix' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
-"     \     'windows' : './install.sh --clang-completer --system-libclang --omnisharp-completer',
-"     \     'cygwin' : './install.sh --clang-completer --system-libclang --omnisharp-completer'
-"     \    }
-"     \ }
 call plug#end()  
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
