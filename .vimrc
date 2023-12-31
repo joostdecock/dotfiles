@@ -107,15 +107,16 @@ map fc zc
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/nvim/plugged')  
-Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
 Plug 'tpope/vim-fugitive'               " Figutive for Git integration
 Plug 'airblade/vim-gitgutter'           " Git gutter keeps track of changes
 Plug 'itchyny/lightline.vim'            " Lightline status bar
-Plug 'scrooloose/nerdtree'              " File tree
 Plug 'tomtom/tlib_vim'                  " Required for other plugins
 Plug 'MarcWeber/vim-addon-mw-utils'     " Required for other plugins
 Plug 'editorconfig/editorconfig-vim'    " See editorconfig.org
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " Markdown live preview
+Plug 'hashivim/vim-terraform'
+Plug 'pedrohdz/vim-yaml-folds'
 call plug#end()  
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
