@@ -116,7 +116,6 @@ Plug 'editorconfig/editorconfig-vim'    " See editorconfig.org
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " Markdown live preview
 Plug 'hashivim/vim-terraform'
-Plug 'pedrohdz/vim-yaml-folds'
 call plug#end()  
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
