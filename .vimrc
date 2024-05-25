@@ -94,14 +94,6 @@ inoremap kj <Esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :let mapleader = ","
 
-" Map Fold Toggle from zi to ft
-map ft zi   
-" Map Fold Open from za to fo
-map fo za   
-" Map Fold Close from zc to fc
-map fc zc   
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "   PLUGIN HANDLING
 "
