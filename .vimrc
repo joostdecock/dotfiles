@@ -107,7 +107,9 @@ Plug 'MarcWeber/vim-addon-mw-utils'     " Required for other plugins
 Plug 'editorconfig/editorconfig-vim'    " See editorconfig.org
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " Markdown live preview
-Plug 'hashivim/vim-terraform'
+Plug 'hashivim/vim-terraform'           " Terraform support
+Plug 'pedrohdz/vim-yaml-folds'          " Fold yaml by default
+Plug 'jacoborus/tender.vim'             " Color scheme
 call plug#end()  
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -141,7 +143,6 @@ nmap <leader>ph <Plug>GitGutterPrevHunk
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>tre :NERDTreeToggle<CR>
 
-" VIM-PHP-CS-FIXER
+" TENDER COLORSCHEME
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent><leader>fpd :call PhpCsFixerFixDirectory()<CR>
-nnoremap <silent><leader>fpf :call PhpCsFixerFixFile()<CR>
+colorscheme tender
