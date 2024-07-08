@@ -146,3 +146,4 @@ map <leader>tre :NERDTreeToggle<CR>
 " TENDER COLORSCHEME
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme tender
+set cursorline
