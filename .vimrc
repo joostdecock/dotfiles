@@ -108,7 +108,6 @@ Plug 'editorconfig/editorconfig-vim'    " See editorconfig.org
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } " Markdown live preview
 Plug 'hashivim/vim-terraform'           " Terraform support
-Plug 'pedrohdz/vim-yaml-folds'          " Fold yaml by default
 Plug 'jacoborus/tender.vim'             " Color scheme
 call plug#end()  
 
@@ -147,3 +146,7 @@ map <leader>tre :NERDTreeToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme tender
 set cursorline
+
+" TREAT MDX AS MARKDOWN
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au BufReadPost *.mdx set syntax=markdown
